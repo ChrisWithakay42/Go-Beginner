@@ -2,7 +2,9 @@ package repository
 
 import (
 	"errors"
+	"go_rest/data/request"
 	"go_rest/model"
+	"go_rest/utils"
 	"gorm.io/gorm"
 )
 
@@ -40,7 +42,7 @@ func (u *UserRepoImpl) Update(user model.User) {
 	var updateUser = request.UpdateUserRequest{
 		Id:    user.ID,
 		Name:  user.Name,
-		Dob:   user.Dob,
+		Dob:   user.DateOfBirth,
 		Email: user.Email,
 	}
 	result := u.Db.Model(&user).Updates(updateUser)

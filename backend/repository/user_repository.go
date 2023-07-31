@@ -1,6 +1,8 @@
 package repository
 
-import "go_rest/model"
+import (
+	"go_rest/model"
+)
 
 type UserRepository interface {
 	Save(users model.User)

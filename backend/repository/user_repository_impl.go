@@ -40,10 +40,10 @@ func (u *UserRepoImpl) Save(user model.User) {
 
 func (u *UserRepoImpl) Update(user model.User) {
 	var updateUser = request.UpdateUserRequest{
-		Id:    user.ID,
-		Name:  user.Name,
-		Dob:   user.DateOfBirth,
-		Email: user.Email,
+		Id:          user.ID,
+		Name:        user.Name,
+		DateOfBirth: user.DateOfBirth,
+		Email:       user.Email,
 	}
 	result := u.Db.Model(&user).Updates(updateUser)
 	utils.ErrorPanic(result.Error)

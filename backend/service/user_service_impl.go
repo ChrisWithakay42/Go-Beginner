@@ -26,7 +26,7 @@ func (u *UserServiceImpl) Create(user request.CreateUserRequest) {
 	err := u.Validate.Struct(user)
 	utils.ErrorPanic(err)
 
-	dob, err := time.Parse("2006-01-01", user.DateOfBirth)
+	dob, err := time.Parse("2006-01-02", user.DateOfBirth)
 
 	userModel := model.User{
 		Name:        user.Name,

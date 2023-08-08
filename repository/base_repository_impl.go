@@ -11,7 +11,7 @@ import (
 //
 //	func NewUserRepoImpl(Db *gorm.DB) UserRepository {
 //		return &UserRepoImpl{Db: Db}
-//	}
+//
 //
 //	func (u *UserRepoImpl) FindAll() []model.User {
 //		var users []model.User

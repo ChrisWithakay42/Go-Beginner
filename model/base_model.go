@@ -7,6 +7,6 @@ type BaseModel struct {
 }
 
 type AdminBaseModel struct {
-	// Make your own implementations here!
+	// Makefile your own implementations here!
 	gorm.Model
 }

@@ -8,5 +8,6 @@ type BaseModel struct {
 
 type AdminBaseModel struct {
 	// Makefile your own implementations here!
+	// with admin related fields
 	gorm.Model
 }
